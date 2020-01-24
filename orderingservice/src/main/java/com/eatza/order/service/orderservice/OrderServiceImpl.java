@@ -43,6 +43,9 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	RestTemplate restTemplate;
+	
+	@Autowired
+	OrderServiceProxy orderServiceProxy;
 
 	private static final Logger logger = LoggerFactory.getLogger(OrderServiceImpl.class);
 
@@ -63,8 +66,9 @@ public class OrderServiceImpl implements OrderService {
 			restTemplate.setMessageConverters(messageConverters);
 			try {
 				logger.debug("Calling restaurant search service to get item details");
-				ItemFetchDto item = restTemplate.getForObject(restaurantServiceItemUrl+itemDto.getItemId(), ItemFetchDto.class);
-
+//				ItemFetchDto item = restTemplate.getForObject(restaurantServiceItemUrl+itemDto.getItemId(), ItemFetchDto.class);
+				ItemFetchDto item = orderServiceProxy.getItemById(itemDto.getItemId());
+				
 				if(item==null ) {
 
 					orderRepository.delete(order);
