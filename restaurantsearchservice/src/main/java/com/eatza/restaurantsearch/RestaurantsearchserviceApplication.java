@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-import com.eatza.restaurantsearch.config.JwtFilter;
+//import com.eatza.restaurantsearch.config.JwtFilter;
 
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -19,12 +19,12 @@ public class RestaurantsearchserviceApplication {
 	}
 
 	
-	@Bean
-	public FilterRegistrationBean jwtFilter() {
-		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-		registrationBean.setFilter(new JwtFilter());
-		registrationBean.addUrlPatterns("/restaurant/*", "/restaurants/*","/item/");
-
-		return registrationBean;
-	}
+	/*
+	 * @Bean public FilterRegistrationBean jwtFilter() { final
+	 * FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+	 * registrationBean.setFilter(new JwtFilter());
+	 * registrationBean.addUrlPatterns("/restaurant/*", "/restaurants/*","/item/");
+	 * 
+	 * return registrationBean; }
+	 */
 }
