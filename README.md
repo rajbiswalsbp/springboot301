@@ -13,7 +13,10 @@ Microservice which provides provision to place order for a customer, update the 
 ## Eureka Discovery
 When a new server is provisioned it will communicate with the discovery server and register its address so that others can communicate with it.
 
-## Gateway
+## Feign client
+Feign aims at simplifying HTTP API clients. Simply put, the developer needs only to declare and annotate an interface while the actual implementation will be provisioned at runtime.
+
+## Gateway(zuul)
 A gateway server is an excellent application in microservice architecture as it allows all responses to originate from a single host. This will eliminate the need for CORS and give us a convenient place to handle common problems like authentication.
 
 ## kafka
