@@ -1,4 +1,4 @@
-package com.rajs.auth;
+package com.eatza.auth;
 
 import java.security.Principal;
 

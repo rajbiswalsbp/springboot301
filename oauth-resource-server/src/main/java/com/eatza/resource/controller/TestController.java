@@ -1,4 +1,4 @@
-package com.rajs.resource.controller;
+package com.eatza.resource.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -21,9 +21,9 @@ public class Producer {
         this.kafkaTemplate.send(TOPIC, message);
     }
     
-	/*
-	 * public void sendRestaurantMessage(String message) {
-	 * logger.info(String.format("#### -> Producing message to restaurant -> %s",
-	 * message)); this.kafkaTemplate.send(TOPIC2, message); }
-	 */
+	
+	  public void sendRestaurantMessage(String message) {
+	  logger.info(String.format("#### -> Producing message to restaurant -> %s",
+	  message)); this.kafkaTemplate.send(TOPIC2, message); }
+	 
 }
